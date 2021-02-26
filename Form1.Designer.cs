@@ -1,7 +1,7 @@
 ﻿
 namespace HomeworkOne
 {
-    partial class Form1
+    partial class calu
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -39,15 +39,21 @@ namespace HomeworkOne
             this.one = new System.Windows.Forms.Button();
             this.two = new System.Windows.Forms.Button();
             this.three = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.number_one = new System.Windows.Forms.TextBox();
             this.zero = new System.Windows.Forms.Button();
-            this.left_bracket = new System.Windows.Forms.Button();
-            this.right_bracket = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.minus = new System.Windows.Forms.Button();
             this.multplicate = new System.Windows.Forms.Button();
             this.divide = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.op = new System.Windows.Forms.TextBox();
+            this.number_two = new System.Windows.Forms.TextBox();
+            this.result = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.point = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // count
@@ -70,6 +76,7 @@ namespace HomeworkOne
             this.eight.TabIndex = 1;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = true;
+            this.eight.Click += new System.EventHandler(this.eight_Click);
             // 
             // nine
             // 
@@ -79,6 +86,7 @@ namespace HomeworkOne
             this.nine.TabIndex = 2;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = true;
+            this.nine.Click += new System.EventHandler(this.nine_Click);
             // 
             // seven
             // 
@@ -98,6 +106,7 @@ namespace HomeworkOne
             this.four.TabIndex = 4;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = true;
+            this.four.Click += new System.EventHandler(this.four_Click);
             // 
             // five
             // 
@@ -107,6 +116,7 @@ namespace HomeworkOne
             this.five.TabIndex = 5;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = true;
+            this.five.Click += new System.EventHandler(this.five_Click);
             // 
             // six
             // 
@@ -116,6 +126,7 @@ namespace HomeworkOne
             this.six.TabIndex = 6;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = true;
+            this.six.Click += new System.EventHandler(this.six_Click);
             // 
             // one
             // 
@@ -125,6 +136,7 @@ namespace HomeworkOne
             this.one.TabIndex = 7;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = true;
+            this.one.Click += new System.EventHandler(this.one_Click);
             // 
             // two
             // 
@@ -134,6 +146,7 @@ namespace HomeworkOne
             this.two.TabIndex = 8;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = true;
+            this.two.Click += new System.EventHandler(this.two_Click);
             // 
             // three
             // 
@@ -143,15 +156,16 @@ namespace HomeworkOne
             this.three.TabIndex = 9;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = true;
+            this.three.Click += new System.EventHandler(this.three_Click);
             // 
-            // textBox1
+            // number_one
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 25);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "0";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.number_one.Location = new System.Drawing.Point(35, 44);
+            this.number_one.Name = "number_one";
+            this.number_one.Size = new System.Drawing.Size(78, 25);
+            this.number_one.TabIndex = 10;
+            this.number_one.Text = "0";
+            this.number_one.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // zero
             // 
@@ -163,25 +177,6 @@ namespace HomeworkOne
             this.zero.UseVisualStyleBackColor = true;
             this.zero.Click += new System.EventHandler(this.zero_Click);
             // 
-            // left_bracket
-            // 
-            this.left_bracket.Location = new System.Drawing.Point(139, 407);
-            this.left_bracket.Name = "left_bracket";
-            this.left_bracket.Size = new System.Drawing.Size(59, 61);
-            this.left_bracket.TabIndex = 12;
-            this.left_bracket.Text = "(";
-            this.left_bracket.UseVisualStyleBackColor = true;
-            // 
-            // right_bracket
-            // 
-            this.right_bracket.Location = new System.Drawing.Point(254, 407);
-            this.right_bracket.Name = "right_bracket";
-            this.right_bracket.Size = new System.Drawing.Size(57, 61);
-            this.right_bracket.TabIndex = 13;
-            this.right_bracket.Text = ")";
-            this.right_bracket.UseVisualStyleBackColor = true;
-            this.right_bracket.Click += new System.EventHandler(this.button13_Click);
-            // 
             // add
             // 
             this.add.Location = new System.Drawing.Point(347, 107);
@@ -190,6 +185,7 @@ namespace HomeworkOne
             this.add.TabIndex = 14;
             this.add.Text = "+";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // minus
             // 
@@ -199,6 +195,7 @@ namespace HomeworkOne
             this.minus.TabIndex = 15;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = true;
+            this.minus.Click += new System.EventHandler(this.minus_Click);
             // 
             // multplicate
             // 
@@ -208,6 +205,7 @@ namespace HomeworkOne
             this.multplicate.TabIndex = 16;
             this.multplicate.Text = "*";
             this.multplicate.UseVisualStyleBackColor = true;
+            this.multplicate.Click += new System.EventHandler(this.multplicate_Click);
             // 
             // divide
             // 
@@ -217,6 +215,7 @@ namespace HomeworkOne
             this.divide.TabIndex = 17;
             this.divide.Text = "/";
             this.divide.UseVisualStyleBackColor = true;
+            this.divide.Click += new System.EventHandler(this.divide_Click);
             // 
             // button1
             // 
@@ -230,20 +229,96 @@ namespace HomeworkOne
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Form1
+            // op
+            // 
+            this.op.Location = new System.Drawing.Point(158, 44);
+            this.op.Name = "op";
+            this.op.Size = new System.Drawing.Size(30, 25);
+            this.op.TabIndex = 19;
+            // 
+            // number_two
+            // 
+            this.number_two.Location = new System.Drawing.Point(253, 43);
+            this.number_two.Name = "number_two";
+            this.number_two.Size = new System.Drawing.Size(82, 25);
+            this.number_two.TabIndex = 20;
+            this.number_two.Text = "0";
+            this.number_two.TextChanged += new System.EventHandler(this.number_two_TextChanged);
+            // 
+            // result
+            // 
+            this.result.Location = new System.Drawing.Point(433, 43);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(100, 25);
+            this.result.TabIndex = 21;
+            this.result.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "第一个数";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(146, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "运算符";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(272, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "第二数";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(463, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "结果";
+            // 
+            // point
+            // 
+            this.point.Location = new System.Drawing.Point(139, 411);
+            this.point.Name = "point";
+            this.point.Size = new System.Drawing.Size(59, 61);
+            this.point.TabIndex = 26;
+            this.point.Text = ".";
+            this.point.UseVisualStyleBackColor = true;
+            this.point.Click += new System.EventHandler(this.point_Click);
+            // 
+            // calu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 480);
+            this.Controls.Add(this.point);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.result);
+            this.Controls.Add(this.number_two);
+            this.Controls.Add(this.op);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.divide);
             this.Controls.Add(this.multplicate);
             this.Controls.Add(this.minus);
             this.Controls.Add(this.add);
-            this.Controls.Add(this.right_bracket);
-            this.Controls.Add(this.left_bracket);
             this.Controls.Add(this.zero);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.number_one);
             this.Controls.Add(this.three);
             this.Controls.Add(this.two);
             this.Controls.Add(this.one);
@@ -254,7 +329,7 @@ namespace HomeworkOne
             this.Controls.Add(this.nine);
             this.Controls.Add(this.eight);
             this.Controls.Add(this.count);
-            this.Name = "Form1";
+            this.Name = "calu";
             this.Text = "计算器";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -274,15 +349,21 @@ namespace HomeworkOne
         private System.Windows.Forms.Button one;
         private System.Windows.Forms.Button two;
         private System.Windows.Forms.Button three;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox number_one;
         private System.Windows.Forms.Button zero;
-        private System.Windows.Forms.Button left_bracket;
-        private System.Windows.Forms.Button right_bracket;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button minus;
         private System.Windows.Forms.Button multplicate;
         private System.Windows.Forms.Button divide;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox op;
+        private System.Windows.Forms.TextBox number_two;
+        private System.Windows.Forms.TextBox result;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button point;
     }
 }
 
